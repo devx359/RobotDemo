@@ -1,0 +1,23 @@
+#Run robot by folder
+python3 -m robot D:\PycharmWorkSpace\Rdemo\Tests
+#Run robot using virtual env python
+C:\Users\haldard\Rdemo\Scripts\python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+#Run single test
+Robot test1.robot
+#Run robot by folder with output directory specified
+python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+
+PIP Commands-------------------------------------------------
+# The system default python:
+$ python3 -m pip install fish
+
+# A virtualenv's python:
+$ C:\Users\haldard\Rdemo\Scripts\python -m pip install robotframework-requests
+
+venv------------------------------
+#Create a virtual environment
+$ python3 -m venv /path/to/new/virtual/env
+#install requirements dependencies
+$pip install -r requirements.txt
+
+
