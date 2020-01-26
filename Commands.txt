@@ -1,11 +1,24 @@
 #Run robot by folder
 python3 -m robot D:\PycharmWorkSpace\Rdemo\Tests
 #Run robot using virtual env python
-C:\Users\haldard\Rdemo\Scripts\python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
 #Run single test
 Robot test1.robot
 #Run robot by folder with output directory specified
-python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+1) python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+2) robot --outputdir path\path robotfile.robot
+
+#rerun failed TC's
+1)robot tests                             # first execute all tests
+2)robot --rerunfailed output.xml tests    # then re-execute failing
+
+# Re-executing failed test suites
+robot --rerunfailedsuites output.xml TestsFolder
+
+# Setting criticality
+robot --critical regression TestsFolder
+
+#Run by tag names
+robot --include smoke TestsFolder
 
 PIP Commands-------------------------------------------------
 # The system default python:
@@ -16,13 +29,22 @@ $ C:\Users\haldard\Rdemo\Scripts\python -m pip install robotframework-requests
 #show installed module details
 python3 -m pip show requests
 
+#passing variables from cmd
+robot --variable vark:567 Tests\test9.robot
+
+
 venv------------------------------
 #Create a virtual environment
-$ python3 -m venv /path/to/new/virtual/env
+python3 -m venv /path/to/new/virtual/env
+python -m venv E:\PythonWorkspace\RobotPy\venv
+
 #install requirements dependencies
 $pip install -r requirements.txt
+E:\PythonWorkspace\RobotPy\venv\scripts\python -m pip install -r requirements.txt //**using virtual env python
 #activate
 virtualenv_name\Scripts\activate.bat
+#create requirments
+pip freeze > requirements.txt.
 
 
 

@@ -1,71 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191129 18:50:02.976" rpa="false">
-<suite id="s1" name="Test1" source="D:\PycharmWorkSpace\Rdemo\Tests\test1.robot">
-<test id="s1-t1" name="This is the first testcase in Robot">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200111 17:27:55.768" rpa="false">
+<suite id="s1" name="Test9" source="E:\PythonWorkspace\RobotPy\Tests\test9.robot">
+<test id="s1-t1" name="TC1 Bishaal bhaater Test Case">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>"hello world"</arg>
+<arg>${x}</arg>
 </arguments>
-<status status="PASS" starttime="20191129 18:50:03.122" endtime="20191129 18:50:03.122"></status>
-</kw>
-<kw name="Create Session" library="RequestsLibrary">
-<doc>Create Session: create a HTTP session to a server</doc>
-<arguments>
-<arg>github</arg>
-<arg>http://api.github.com</arg>
-</arguments>
-<msg timestamp="20191129 18:50:03.122" level="INFO">Creating Session using : alias=github, url=http://api.github.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20191129 18:50:03.122" endtime="20191129 18:50:03.122"></status>
-</kw>
-<kw name="Get Request" library="RequestsLibrary">
-<doc>Send a GET request on the session object found using the
-given `alias`</doc>
-<arguments>
-<arg>github</arg>
-<arg>/users/bulkan</arg>
-</arguments>
-<assign>
-<var>${resp}</var>
-</assign>
-<msg timestamp="20191129 18:50:03.122" level="INFO">GET Request using : uri=/users/bulkan, params=None, allow_redirects=True, timeout=None
-headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
-data=None 
-json=None</msg>
-<msg timestamp="20191129 18:50:04.772" level="INFO">C:\Python38\lib\site-packages\urllib3\connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(</msg>
-<msg timestamp="20191129 18:50:04.772" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20191129 18:50:03.122" endtime="20191129 18:50:04.772"></status>
+<status status="PASS" starttime="20200111 17:27:56.006" endtime="20200111 17:27:56.007"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${resp}</arg>
+<arg>${ll}</arg>
 </arguments>
-<status status="PASS" starttime="20191129 18:50:04.772" endtime="20191129 18:50:04.777"></status>
+<status status="PASS" starttime="20200111 17:27:56.007" endtime="20200111 17:27:56.008"></status>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<arguments>
-<arg>${resp.status_code}</arg>
-<arg>200</arg>
-</arguments>
-<msg timestamp="20191129 18:50:04.777" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20191129 18:50:04.777" endtime="20191129 18:50:04.777"></status>
-</kw>
-<kw name="Dictionary Should Contain Value" library="Collections">
-<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
-<arguments>
-<arg>${resp.json()}</arg>
-<arg>Bulkan Evcimen</arg>
-</arguments>
-<status status="PASS" starttime="20191129 18:50:04.777" endtime="20191129 18:50:04.777"></status>
-</kw>
-<status status="PASS" starttime="20191129 18:50:03.122" endtime="20191129 18:50:04.777" critical="yes"></status>
+<status status="PASS" starttime="20200111 17:27:56.006" endtime="20200111 17:27:56.008" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20191129 18:50:02.981" endtime="20191129 18:50:04.787"></status>
+<status status="PASS" starttime="20200111 17:27:55.770" endtime="20200111 17:27:56.010"></status>
 </suite>
 <statistics>
 <total>
@@ -75,7 +28,7 @@ json=None</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Test1">Test1</stat>
+<stat pass="1" fail="0" id="s1" name="Test9">Test9</stat>
 </suite>
 </statistics>
 <errors>
