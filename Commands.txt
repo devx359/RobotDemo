@@ -46,6 +46,54 @@ virtualenv_name\Scripts\activate.bat
 #create requirments
 pip freeze > requirements.txt.
 
+************ Merged ****************************************
+
+#Run robot by folder
+python3 -m robot D:\PycharmWorkSpace\Rdemo\Tests
+#Run robot using virtual env python
+C:\Users\haldard\Rdemo\Scripts\python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+#Run single test
+Robot test1.robot
+#Run robot by folder with output directory specified
+python -m robot -d D:\PycharmWorkSpace\Rdemo\Robot_Output D:\PycharmWorkSpace\Rdemo\Tests
+#debug file enabled + output xml file custom name +output directory specified + report background colors set +ADD PYTHON PATH for python libraries
+robot  --debugfile debugfilename --output original.xml -d D:\PycharmWorkSpace\RobotDemo\Robot_Output --pythonpath D:\PycharmWorkSpace\RobotDemo\Library  --reportbackground #fdfffc:#fffdfc  test4.robot
+
+
+Rebot-------------------------------------------------------------
+#generate report from xml
+rebot path/to/output_file.xml
+rebot --include smoke --name Smoke_Tests c:\results\output.xml
+
+#Re execute failed tests and merge results
+robot --output original.xml tests                          # first execute all tests
+robot --rerunfailed original.xml --output rerun.xml tests  # then re-execute failing
+rebot --merge original.xml rerun.xml                       # finally merge results
+
+
+
+PIP Commands-------------------------------------------------
+# The system default python:
+$ python3 -m pip install fish
+
+# A virtualenv's python:
+$ C:\Users\haldard\Rdemo\Scripts\python -m pip install robotframework-requests
+#show installed module details
+python3 -m pip show requests
+
+venv------------------------------
+#Create a virtual environment
+$ python3 -m venv /path/to/new/virtual/env
+#install requirements dependencies
+$pip install -r requirements.txt
+#activate
+virtualenv_name\Scripts\activate.bat
+
+
+
+
+
+
 
 
 

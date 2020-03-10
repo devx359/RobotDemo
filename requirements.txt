@@ -43,7 +43,7 @@ robotframework-exceldatadriver==1.0.0
 robotframework-jsonlibrary==0.3.1
 robotframework-requests==0.6.2
 robotframework-ride==1.7.3.1
-robotframework-seleniumlibrary==4.1.0
+robotframework-seleniumlibrary==4.3.0
 robotframeworklexer==1.1
 selenium==3.141.0
 six==1.13.0
