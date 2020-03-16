@@ -41,8 +41,17 @@ class  excelUtil:
 
         return ll
 
-    def  readColoumn(self, sheetName , coloumnNumber):
+    def  readColoumn(self, sheetName , coloumnName):
         ws = wb[sheetName]
+        coloumn = ws[coloumnName]
+        #print(type(coloumn))
+        #print(len(coloumn))
+        ll = []
+        for cell in coloumn:
+            print(cell.value)
+            ll.append(cell.value)
+
+        return (ll)
 
 
     def  closeExcel(self):

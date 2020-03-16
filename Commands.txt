@@ -18,7 +18,9 @@ robot --rerunfailedsuites output.xml TestsFolder
 robot --critical regression TestsFolder
 
 #Run by tag names
-robot --include smoke TestsFolder
+robot --include (-i) smoke TestsFolder
+robot --exclude (-e)skip  test4.robot  #excludes tag "skip"
+
 
 PIP Commands-------------------------------------------------
 # The system default python:

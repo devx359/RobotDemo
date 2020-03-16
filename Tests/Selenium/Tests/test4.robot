@@ -11,7 +11,9 @@ Suite Setup  initialSetup
 
 *** Test Cases ***
 TC1
+    [Tags]  skip
     [Teardown]  shutdown
+
     log to console   hellorobot
     Open Browser  http://jira:3693/jira/login.jsp  Chrome
     Input Text  id:login-form-username  haldard
@@ -47,9 +49,25 @@ TC1
     END
    # Capture Page Screenshot  scr.png
 
+TC02
+    [Teardown]  shutdown
+    Log To Console  tc02 starts
+    should be true  False
+
+TC03
+     [Teardown]  shutdown
+     Log To Console  tc03 starts
+
+TC04
+    [Teardown]  shutdown
+    log to console  tc04 starts
+    wait
+
+
 *** Keywords ***
 shutdown
     Run Keyword If Test Failed  Capture Page Screenshot  EMBED
+
     Close Browser
 initialSetup
     Set Screenshot Directory  ../Screenshot
