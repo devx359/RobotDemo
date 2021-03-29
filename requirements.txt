@@ -27,7 +27,7 @@ pipenv==2018.11.26
 pluggy==0.13.1
 ply==3.11
 py==1.8.1
-Pygments==2.5.1
+Pygments==2.7.4
 Pypubsub==4.0.3
 pyrsistent==0.15.6
 python-dateutil==2.8.1
