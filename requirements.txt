@@ -18,7 +18,7 @@ jsonpath-rw-ext==1.2.2
 jsonpointer==2.0
 jsonschema==3.2.0
 more-itertools==8.0.0
-numpy==1.17.4
+numpy==1.22.0
 openpyxl==2.6.2
 pandas==0.25.3
 pbr==5.4.4
